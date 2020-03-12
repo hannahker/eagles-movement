@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>Eagles in the PNW</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css" rel="stylesheet" />
+<script src='https://api.mapbox.com/mapbox.js/plugins/turf/v3.0.11/turf.min.js'></script>   
+<script charset="utf-8" src="https://d3js.org/d3.v4.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>   
+    
+<body>
+    
+    <div class='flex-container'>
+        <div id='panel'>
+            <div id='title' class='beige inside-padding-large title-font'>Following BC's Eagles</div>
+            <div class='details a green inside-padding-small'>STEP 1: Select an eagle and see its movement on the map
+                <div class='inset green inside-padding-small'>
+                    <select class='inset beige button' id="eagle">  
+                        <option>- Select -</option>
+                        <option>BACA03</option>
+                        <option>TERF05</option>
+                        <option>TERF03</option>
+                        <option>TERF01</option>          
+                        <option>TERF02</option>
+                        <option>BACA02</option>
+                        <option>TERF04</option>
+                        <option>BACA01</option>
+                        <option>TEUS03</option>
+                        <option>BETA02</option>
+                        <option>All</option>
+                    </select>
+                </div>
+            <hr class='line'>   
+            </div>
+            
+            <div class='details b green inside-padding-small'>STEP 2: Check out some basic information for that eagle's movement
+                <div class='flex-container inside-padding-large'>
+                    <div class='container-graph inside-padding-small'>
+                        <div id='rect1'></div>
+                        <div id='data1'>0 km total distance</div>
+                    </div>
+                    <div class='container-graph inside-padding-small'>
+                        <div id='rect2'></div>
+                        <div id='data2'>0 days total duration</div>
+                    </div>
+                    <div class='container-graph inside-padding-small'>
+                        <div id='rect3'></div>
+                        <div id='data3'>0 km per day average</div>
+                    </div>
+                    
+                </div>
+                 
+
+                <hr class='line'>     
+            </div>          
+            
+            <div class='details c green inside-padding-small'>STEP 3: Move the timeslider to further explore the data 
+                
+                <div id='test' class='flex-container inside-padding-large'>
+                    <div id='starttime' class='inside-padding-small'>Start time</div>
+                    <div id='slider-container' class='inside-padding-small'>
+                        <input id="slider" class='slider' type="range" min="0" max="500" step="1" value="500" />
+                    </div>                 
+                    <div id='endtime' class='inside-padding-small'>End time</div>
+                </div>           
+                
+                
+                
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+    
+<script src="functions.js"></script>
+ 
+</body>
+</html>

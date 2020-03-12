@@ -1,0 +1,142 @@
+/* ---------- Baseline ---------- */ 
+	body {
+        margin: 0; 
+        padding: 0; 
+        font-family: 'Courier New';
+        font-style: italic;
+        text-align: center;
+        background-color: #5e6f52;
+    }
+    
+    /* ---------- Dimensions of basic elements ---------- */ 
+	#map{  
+        height: 100vh;
+        width: 60vw;
+    }
+    #panel{
+        height: 100vh;
+        width: 40vw;
+    }
+    #title{
+        min-height: 15vh; 
+        width: 100%;   
+        line-height: 50px;
+    }
+    .details{
+        width: 100% - 10px;
+        text-align: left;
+    }
+    .inset{
+        padding:0.35em 1.2em;
+        margin:0 0.3em 0.3em 0;
+        background-color: #C9C19F;
+        font-family: 'Courier New';
+        font-style: italic;
+        text-align: center;
+    }
+    .a{
+        height: 20vh;
+    }
+    .b{
+        min-height: 20vh;
+    }
+    .c{
+        height: 20vh;
+    }
+    .container-graph{
+        width: 150px;
+        height: 80px;
+        margin: auto;
+    }
+    
+    /* ---------- More detailed formatting ---------- */
+    
+    /* So that the padding doesn't 
+    add to the sizing of the div element */
+    .inside-padding-large{
+        box-sizing: border-box;
+        padding: 25px;
+    }
+    .inside-padding-small{
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    /* Separator line between details sections */ 
+    .line{
+        border: 0.5px solid #C9C19F;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    /* Border for the selection button */
+    .button{
+        border-style: solid;
+        border-width: thin;
+        border-width: 4px;
+        border-color: #C9C19F; 
+        opacity: 0.8;
+    }
+    .button:hover{
+        opacity: 1; 
+        cursor: pointer;
+    }
+    
+    .flex-container{
+        display: flex;
+    }
+    
+    /* ---------- Text styling ---------- */
+    .title-font{
+        font-size: 34px;
+    }
+    .normal-font{
+        font-size: 12px;
+    } 
+
+    /* ---------- Colours ---------- */
+    /* For green background */ 
+    .green{
+        background-color: #5e6f52;
+        color: #C9C19F;
+    }
+    /* For beige background */ 
+    .beige{
+        background-color: #C9C19F;
+        color: #5e6f52;
+    }
+    
+    /* ---------- Slider ---------- */
+    /* styling adapted from: https://www.w3schools.com/howto/howto_js_rangeslider.asp */ 
+    .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 10px;
+        background: #C9C19F;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+        }
+
+        .slider:hover {
+        opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        background: #3d4735;
+        cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+        width: 15px;
+        height: 15px;
+        background: #4CAF50;
+        cursor: pointer;
+        }
+  
+    #test{
+        margin: auto;
+    }
