@@ -1,3 +1,4 @@
+// ------------------------------------------------ FUNCTIONS 
 // calculate the total distance for a linestring
 // uses the distance function from turf.js
 function dist(coords){
@@ -108,6 +109,8 @@ function convertDate(date){
     return(newDate);
 }
 
+// ------------------------------------------------ CREATE THE MAP
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiaGFubmFoa2VyIiwiYSI6ImNpdHEzcndkajAwYmwyeW1zd2UxdTAwMnMifQ.hYglJOOC0Mhq7xNYOxc6qg';
     
 var map = new mapboxgl.Map({
@@ -163,24 +166,16 @@ map.on('load', function() {
                 for(var i = 0; i<selected.length; i++){
                    coordinates.push(selected[i].geometry.coordinates)    
                 }
-                
-                console.log('Before: ' + document.getElementById('slider').value)
+
                 // update the parameters for the timeslider based on the selected data
                 document.getElementById("slider").setAttribute("max", selected.length);
                 document.getElementById("slider").setAttribute("value", selected.length);
-                //console.log('Length: ' + selected.length);
-                console.log('After: ' + document.getElementById('slider').value)
-                //console.log('Max: ' + document.getElementById('slider').max)
                 
                 // calculate variables for the eagle's movement 
                 var totalDistance = dist(coordinates);
                 var totalDuration = duration(selected);
                 var start = selected[0].properties.timestamp.split(' ')[0];
                 var end = selected[selected.length-1].properties.timestamp.split(' ')[0];
-                
-                // trying to convert to the month name 
-                //var date = selected[0].properties.timestamp;
-                //const month = date.toLocaleString('default', { month: 'long' });
 
                 // writing the time to the div 
                 document.getElementById('starttime').innerHTML = convertDate(start);
@@ -234,12 +229,11 @@ map.on('load', function() {
                     padding: 20
                 });  
                 
+                // ------------------------------------------------ WHEN THE SLIDER IS MOVED
                 // help from https://docs.mapbox.com/mapbox-gl-js/example/timeline-animation/
-                // update the data on the map by time 
-                // ------------------------------------------------ WHEN THE SLIDER IS MOVED 
+                // update the data on the map by time  
                 document.getElementById('slider').addEventListener('input', function(e) {
-                    updateMap(e.target.value, coordinates);
-                    
+                    updateMap(e.target.value, coordinates);                   
                     });  
                 
             };
