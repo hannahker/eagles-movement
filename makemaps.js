@@ -127,7 +127,8 @@ map.on('load', function() {
         map.addControl(new mapboxgl.ScaleControl());
        
         // ** help from class tutorial: example here https://docs.mapbox.com/mapbox-gl-js/example/live-update-feature/
-        d3.json('eagles.geojson', function(err, data) {         
+        // access the data, stored in Github repo, published with Github Pages
+        d3.json('https://hannahker.github.io/eagles-movement/eagles.geojson', function(err, data) {         
             
             if (err) throw err;
         

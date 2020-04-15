@@ -2,8 +2,7 @@
 	body {
         margin: 0; 
         padding: 0; 
-        font-family: 'Courier New';
-        font-style: italic;
+        font-family: 'Century Gothic';
         text-align: center;
         background-color: #5e6f52;
     }
@@ -16,10 +15,11 @@
     #panel{
         height: 100vh;
         width: 40vw;
+        overflow:auto;
     }
     #title{
         min-height: 15vh; 
-        width: 100%;   
+        min-width: 100%;   
         line-height: 50px;
     }
     #footer{
@@ -32,20 +32,20 @@
     }
     .inset{
         padding:0.35em 1.2em;
-        margin:0 0.3em 0.3em 0;
-        background-color: #C9C19F;
-        font-family: 'Courier New';
+        margin:auto;
+        
         font-style: italic;
         text-align: center;
+        
     }
     .a{
-        height: 20vh;
+        min-height: 15vh;
     }
     .b{
-        min-height: 20vh;
+        min-height: 15vh;
     }
     .c{
-        height: 20vh;
+        min-height: 15vh;
     }
     .container-graph{
         width: 150px;
@@ -87,6 +87,19 @@
     .flex-container{
         display: flex;
     }
+
+    /* ---------- Centering elements in step 3 section ---------- */
+    .time-slide{
+        text-align:center; 
+    }
+    .cent{
+        display:inline-block;
+    }
+    .date{
+        overflow: visible;
+        width:100px;
+    }
+
     
     /* ---------- Text styling ---------- */
     .title-font{
@@ -100,8 +113,12 @@
     /* For green background */ 
     .green{
         background-color: #5e6f52;
-        color: #C9C19F;
+        color: rgba(201, 193, 159, 1);
     }
+    .green-light{
+            background-color: #5e6f52;
+            color: rgba(201, 193, 159, 0.7);
+        }
     /* For beige background */ 
     .beige{
         background-color: #C9C19F;
@@ -119,28 +136,49 @@
         opacity: 0.7;
         -webkit-transition: .2s;
         transition: opacity .2s;
-        }
+    }
 
-        .slider:hover {
+    .slider:hover {
         opacity: 1;
-        }
+    }
 
-        .slider::-webkit-slider-thumb {
+    .slider::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
         width: 15px;
         height: 15px;
         background: #3d4735;
         cursor: pointer;
-        }
+    }
 
-        .slider::-moz-range-thumb {
+    .slider::-moz-range-thumb {
         width: 15px;
         height: 15px;
-        background: #4CAF50;
+        background: #3d4735;
         cursor: pointer;
+    }
+
+    /* ---------- Scrollbar ---------- */
+    /* width */
+    ::-webkit-scrollbar {
+      width: 5px;
+        height:5px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #5e6f52; 
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #3d4735; 
+    }
+
+    /* ---------- When the page gets too small ---------- */
+    @media screen and (max-width: 1000px) {
+        .flex-container.collapse{
+            flex-direction: column;
         }
-  
-    #test{
-        margin: auto;
+
     }
