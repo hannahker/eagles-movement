@@ -111,7 +111,7 @@ function convertDate(date){
 
 // ------------------------------------------------ CREATE THE MAP
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiaGFubmFoa2VyIiwiYSI6ImNpdHEzcndkajAwYmwyeW1zd2UxdTAwMnMifQ.hYglJOOC0Mhq7xNYOxc6qg';
+mapboxgl.accessToken = 'pk.eyJ1IjoiaGFubmFoa2VyIiwiYSI6ImNrZ256bjVtZTA1dW4ycm52em0yNDZwNGwifQ.wfHqLsYG4Ubk4yPwz_lopQ';
     
 var map = new mapboxgl.Map({
     container: 'map',
